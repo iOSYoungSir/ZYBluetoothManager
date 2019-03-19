@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  BluetoothManager
+//
+//  Created by tzyang on 2019/3/19.
+//  Copyright © 2019年 tzyang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+
+#define ZYLog(FORMAT, ...) fprintf(stderr,"\n=> %s %s %d行 \t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __func__ ,__LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define ZYLog(...)
+
+#endif
+
+#endif /* PrefixHeader_pch */
