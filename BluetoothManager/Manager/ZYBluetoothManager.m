@@ -14,7 +14,7 @@ static ZYBluetoothManager * manager = nil;
 //广播包key
 static NSString * const kAdDataKey = @"kCBAdvDataManufacturerData";
 
-#pragma mark 阿斯丹顿
+#pragma mark UUID
 //服务UUID
 static NSString * const kServiceUUID = @"";
 //特征值 - 读
